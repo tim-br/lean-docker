@@ -10,7 +10,7 @@ ENV ELAN_HOME=/usr/local/elan
 ENV PATH="${ELAN_HOME}/bin:${PATH}"
 
 RUN curl -sSf https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --no-modify-path --default-toolchain leanprover/lean4:v4.25.2 \
-    && elan default leanprover/lean4:v4.25.2
+    && elan default leanprover/lean4:v4.25.2 \
     && lean --version
 
 WORKDIR /opt/test-runner
